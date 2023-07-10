@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+
+{% block main-content %}
+<div class="container mt-3">
+<br>
+<h2 class="text-center">About Us</h2>
+<br>
+<div class="row container" style="height:800px">
+  <div style="background:url('{% static 'app/image/banner/alash.jpg' %}');background-size:cover;width:1500px;height:400px"></div>
+  <p class="fs-4 text-center">ALASH is a Kazakh clothing brand that was founded in 2023. The promotion of modern identity is one of the main principles of the company.
+
+    The ALASH brand was liked by many residents and guests of Kazakhstan, and in a very short period of time was able to become one of the most recognizable domestic brands.
+    
+    Over time, our identity has become a trend. We continue to develop and get closer and closer to you. Now we are located in six cities: Almaty, Astana, Aqtau,Kyzylorda, Shymkent, Aqtöbe and Atyrau.</p>
+</div>
+</div>
+{% endblock main-content %}

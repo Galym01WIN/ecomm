@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+{% block content %}
+  {% if results %}
+    <h2>Результаты поиска для "{{ query }}"</h2>
+
+    {% for product in results %}
+      <div>
+        <h1>{{ product.title }}</h1>
+        <h4>{{ product.category }}</h4>
+        <img src="{{ product.product_image.url }}" style="max-height: 300px;" alt="{{ product.title }}">
+        <div>{{ product.description }}</div>
+        <br><br>
+        <div><h6>{{ product.date }}</h6></div>
+      </div>
+      <br><br>
+      <hr>
+    {% endfor %}
+
+  {% else %}
+    <p>Нет результатов для "{{ query }}"</p>
+  {% endif %}
+{% endblock %}
+
